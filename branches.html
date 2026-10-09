@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>শাখাসমূহ ও যোগাযোগ | প্রজ্ঞা একাডেমি ও কেয়ার</title>
+  
+  <!-- Google Fonts: Noto Sans Bengali (Bangla) + Outfit (English) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+              950: '#0f172a'
+            }
+          },
+          fontFamily: {
+            bangla: ['"Noto Sans Bengali"', 'sans-serif'],
+            sans: ['"Noto Sans Bengali"', '"Outfit"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    body {
+      font-family: 'Noto Sans Bengali', sans-serif;
+      color: #0f172a;
+    }
+    .font-num {
+      font-family: 'Outfit', 'Noto Sans Bengali', sans-serif;
+    }
+    /* Explicit high-visibility input styling */
+    input:not([type="checkbox"]):not([type="radio"]),
+    select,
+    textarea {
+      color: #0f172a !important;
+      -webkit-text-fill-color: #0f172a !important;
+      background-color: #ffffff !important;
+      caret-color: #2563eb !important;
+      font-family: 'Noto Sans Bengali', 'Outfit', sans-serif !important;
+      font-weight: 500 !important;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: #94a3b8 !important;
+      -webkit-text-fill-color: #94a3b8 !important;
+      font-weight: 400 !important;
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 50px white inset !important;
+      box-shadow: 0 0 0 50px white inset !important;
+      -webkit-text-fill-color: #0f172a !important;
+      color: #0f172a !important;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-600 selection:text-white flex flex-col min-h-screen">
+
+  <!-- TOP TICKER BAR -->
+  <div class="bg-gradient-to-r from-brand-900 via-indigo-900 to-brand-900 text-white text-xs sm:text-sm py-2 px-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-amber-400 text-slate-950">
+          সরাসরি ভিজিট
+        </span>
+        <span class="text-slate-200">আমাদের প্রতিটি শাখায় সরাসরি এসেও ভর্তি ও ফ্রি ডেমো বুকিং সম্পন্ন করতে পারবেন।</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-4 text-slate-300">
+        <a href="tel:01700123456" class="hover:text-amber-300 transition-colors flex items-center gap-1 font-num">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-amber-400"></i> ০১৭০০-১২৩৪৫৬
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-700 to-indigo-900 flex items-center justify-center text-white shadow-md">
+            <i data-lucide="graduation-cap" class="w-6 h-6 text-amber-300"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="text-2xl font-bold tracking-tight text-slate-900">প্রজ্ঞা</span>
+              <span class="text-xs font-semibold px-2 py-0.5 rounded bg-brand-100 text-brand-800">একাডেমিক কেয়ার</span>
+            </div>
+            <p class="text-[11px] text-slate-500 font-medium">স্বপ্ন ছোঁয়ার বিশ্বস্ত ঠিকানা</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-1 font-semibold text-[15px] text-slate-700">
+          <a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-700 hover:bg-slate-100 transition-colors">হোম</a>
+          <a href="courses.html" class="px-3 py-2 rounded-lg hover:text-brand-700 hover:bg-slate-100 transition-colors">কোর্সসমূহ</a>
+          <a href="results.html" class="px-3 py-2 rounded-lg hover:text-brand-700 hover:bg-slate-100 transition-colors">ফলাফল</a>
+          <a href="routines.html" class="px-3 py-2 rounded-lg hover:text-brand-700 hover:bg-slate-100 transition-colors">রুটিন ও নোটিশ</a>
+          <a href="teachers.html" class="px-3 py-2 rounded-lg hover:text-brand-700 hover:bg-slate-100 transition-colors">শিক্ষকবৃন্দ</a>
+          <a href="branches.html" class="px-3 py-2 rounded-lg text-brand-700 bg-brand-50 font-bold transition-colors">শাখাসমূহ</a>
+        </nav>
+
+        <!-- CTA Buttons -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="admission.html" class="px-5 py-2.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm shadow-md transition-all">
+            অনলাইন ভর্তি
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="lg:hidden flex items-center gap-2">
+          <a href="admission.html" class="px-3 py-1.5 rounded-lg bg-brand-700 text-white font-bold text-xs">ভর্তি</a>
+          <button id="mobileMenuBtn" aria-label="Menu" class="p-2 rounded-xl text-slate-700 hover:bg-slate-100">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 shadow-lg">
+      <a href="index.html" class="block px-3 py-2 rounded-lg font-semibold text-slate-800 hover:bg-slate-100">হোম</a>
+      <a href="courses.html" class="block px-3 py-2 rounded-lg font-semibold text-slate-800 hover:bg-slate-100">কোর্সসমূহ</a>
+      <a href="results.html" class="block px-3 py-2 rounded-lg font-semibold text-slate-800 hover:bg-slate-100">ফলাফল</a>
+      <a href="routines.html" class="block px-3 py-2 rounded-lg font-semibold text-slate-800 hover:bg-slate-100">রুটিন ও নোটিশ</a>
+      <a href="teachers.html" class="block px-3 py-2 rounded-lg font-semibold text-slate-800 hover:bg-slate-100">শিক্ষকবৃন্দ</a>
+      <a href="branches.html" class="block px-3 py-2 rounded-lg font-bold text-brand-700 bg-brand-50">শাখাসমূহ</a>
+      <div class="pt-3 border-t border-slate-100">
+        <a href="admission.html" class="block w-full py-2.5 rounded-xl bg-brand-700 text-white font-bold text-sm text-center">অনলাইন ভর্তি ফরম</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-gradient-to-r from-emerald-900 via-teal-950 to-slate-900 text-white py-14 px-4 text-center">
+    <div class="max-w-4xl mx-auto space-y-3">
+      <span class="inline-block text-xs font-bold uppercase tracking-wider bg-emerald-400 text-slate-950 px-3 py-1 rounded-full">
+        শাখা নেটওয়ার্ক
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+        আমাদের শাখাসমূহ ও সরাসরি যোগাযোগ
+      </h1>
+      <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">
+        ঢাকা শহরের প্রতিটি প্রধান লোকেশনে আমাদের আধুনিক ক্যাম্পাসে এসে সরাসরি ভর্তির পরামর্শ নিন।
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN BRANCHES CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-1 space-y-14">
+    
+    <!-- Branches Grid -->
+    <div>
+      <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+        <i data-lucide="map-pin" class="w-6 h-6 text-brand-700"></i>
+        <span>ক্যাম্পাস লোকেশন ও ফোন নম্বর</span>
+      </h2>
+      <div id="branchesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+
+    <!-- Contact Form & Hours -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Contact Form -->
+      <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
+        <h3 class="text-xl font-bold text-slate-900 mb-2">যেকোনো প্রশ্ন বা তথ্যের জন্য বার্তা পাঠান</h3>
+        <p class="text-xs text-slate-500 mb-6">আমাদের শিক্ষাপরামর্শক টিম দ্রুততম সময়ে আপনার সাথে যোগাযোগ করবে।</p>
+
+        <form onsubmit="handleQuickEnroll(event)" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">শিক্ষার্থীর নাম *</label>
+              <input type="text" id="quickName" required placeholder="পূর্ণ নাম" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 font-medium text-sm focus:border-brand-600 focus:ring-2 focus:ring-brand-100 outline-none transition-all shadow-xs">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">মোবাইল নম্বর *</label>
+              <input type="tel" id="quickPhone" required placeholder="০১৭XXXXXXXX" pattern="[0-9]{11}" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 font-medium text-sm focus:border-brand-600 focus:ring-2 focus:ring-brand-100 outline-none font-num transition-all shadow-xs">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">কাঙ্ক্ষিত শাখা *</label>
+              <select id="quickBranch" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-brand-600 focus:ring-2 focus:ring-brand-100 outline-none bg-white text-slate-900 font-semibold shadow-xs">
+                <option value="Farmgate">ফার্মগেট শাখা (প্রধান শাখা)</option>
+                <option value="Mirpur">মিরপুর-১০ শাখা</option>
+                <option value="Uttara">উত্তরা সেক্টর-৭ শাখা</option>
+                <option value="Dhanmondi">ধানমন্ডি শাখা</option>
+                <option value="Online">অনলাইন লাইভ ব্যাচ</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">শ্রেণি / কোর্স *</label>
+              <select class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-brand-600 focus:ring-2 focus:ring-brand-100 outline-none bg-white text-slate-900 font-semibold shadow-xs">
+                <option>HSC বিজ্ঞান বিভাগ</option>
+                <option>HSC ব্যবসায় শিক্ষা</option>
+                <option>SSC নবম-দশম বিজ্ঞান</option>
+                <option>SSC নবম-দশম বাণিজ্য</option>
+                <option>জুনিয়র একাডেমিক (৬ষ্ঠ-৮ম)</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">আপনার প্রশ্ন বা বার্তা (ঐচ্ছিক)</label>
+            <textarea rows="3" placeholder="কোর্স, ফি বা টাইমিং সংক্রান্ত যেকোনো প্রশ্ন লিখুন..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 font-medium text-sm focus:border-brand-600 focus:ring-2 focus:ring-brand-100 outline-none transition-all shadow-xs"></textarea>
+          </div>
+
+          <button type="submit" class="px-8 py-3 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span>মেসেজ পাঠান</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Office Hours & Hotline Info Card -->
+      <div class="lg:col-span-5 bg-gradient-to-br from-brand-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+        <div>
+          <span class="text-xs font-bold text-amber-300 uppercase tracking-wider">সরাসরি সহায়তা</span>
+          <h3 class="text-2xl font-bold mt-1">অফিস সময় ও হটলাইন</h3>
+          <p class="text-slate-300 text-xs mt-1">সপ্তাহের ৭ দিনই আমাদের ক্যাম্পাস ও হেল্পডেস্ক খোলা থাকে।</p>
+        </div>
+
+        <div class="space-y-4 text-sm">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-amber-400 shrink-0">
+              <i data-lucide="clock" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <div class="font-bold">সরাসরি অফিস সময়:</div>
+              <div class="text-xs text-slate-300">সকাল ৮:০০ টা – রাত ৯:০০ টা (প্রতিদিন)</div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-emerald-400 shrink-0">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <div class="font-bold">সেন্ট্রাল হটলাইন:</div>
+              <a href="tel:01700123456" class="text-xs text-slate-200 hover:text-white font-num">০১৭০০-১২৩৪৫৬ (ক্লিক করে কল করুন)</a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-rose-400 shrink-0">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <div class="font-bold">ইমেইল:</div>
+              <div class="text-xs text-slate-300 font-num">info@proggaacademic.edu.bd</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-white/15">
+          <a href="https://wa.me/8801700123456" target="_blank" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg transition-all">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>হোয়াটসঅ্যাপে সরাসরি যোগাযোগ</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-300 pt-12 pb-8 border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center text-white">
+            <i data-lucide="graduation-cap" class="w-6 h-6 text-amber-300"></i>
+          </div>
+          <div>
+            <div class="text-xl font-bold text-white">প্রজ্ঞা একাডেমি</div>
+            <p class="text-xs text-slate-400">স্বপ্ন ছোঁয়ার বিশ্বস্ত ঠিকানা (ক্লাস ৬–১২)</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="https://facebook.com" target="_blank" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#1877F2] flex items-center justify-center text-white transition-colors" title="Facebook">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://youtube.com" target="_blank" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#FF0000] flex items-center justify-center text-white transition-colors" title="YouTube">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://wa.me/8801700123456" target="_blank" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#25D366] flex items-center justify-center text-white transition-colors" title="WhatsApp">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 0C5.396 0 .016 5.38.016 12.016c0 2.115.553 4.18 1.603 6.002L.062 24l6.166-1.543A11.97 11.97 0 0 0 12.03 24c6.635 0 12.015-5.38 12.015-12.016C24.047 5.38 18.666 0 12.031 0zm0 22.016c-1.848 0-3.655-.497-5.23-1.439l-.375-.223-3.882.97 1.036-3.784-.245-.391a10.003 10.003 0 0 1-1.536-5.133c0-5.523 4.493-10.016 10.016-10.016 5.522 0 10.015 4.493 10.015 10.016 0 5.523-4.493 10.016-10.015 10.016zm5.488-7.508c-.3-.15-1.775-.875-2.05-.975-.275-.1-.475-.15-.675.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.414-1.49-1.077-.96-1.805-2.146-2.017-2.51-.212-.364-.023-.56.127-.71.135-.135.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.243-.585-.49-.505-.675-.515-.175-.01-.375-.01-.575-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.115 3.23 5.124 4.53.716.31 1.275.495 1.71.633.72.228 1.374.196 1.892.119.577-.086 1.775-.726 2.025-1.426.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="pt-6 text-center text-xs text-slate-500">
+        &copy; ২০২৬ প্রজ্ঞা একাডেমি ও কেয়ার। সর্বস্বত্ব সংরক্ষিত।
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

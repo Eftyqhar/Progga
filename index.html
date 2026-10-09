@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>প্রজ্ঞা একাডেমি | ক্লাস ৬–১০ (SSC) ও একাদশ-দ্বাদশ (HSC) পূর্ণাঙ্গ প্রস্তুতি</title>
+  
+  <!-- Google Fonts: Noto Sans Bengali (Bangla) + Outfit (English) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+              950: '#0f172a'
+            }
+          },
+          fontFamily: {
+            bangla: ['"Noto Sans Bengali"', 'sans-serif'],
+            sans: ['"Noto Sans Bengali"', '"Outfit"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    body {
+      font-family: 'Noto Sans Bengali', sans-serif;
+      color: #0f172a;
+    }
+    .font-num {
+      font-family: 'Outfit', 'Noto Sans Bengali', sans-serif;
+    }
+    /* Explicit high-visibility input styling */
+    input:not([type="checkbox"]):not([type="radio"]),
+    select,
+    textarea {
+      color: #0f172a !important;
+      -webkit-text-fill-color: #0f172a !important;
+      background-color: #ffffff !important;
+      caret-color: #2563eb !important;
+      font-family: 'Noto Sans Bengali', 'Outfit', sans-serif !important;
+      font-weight: 500 !important;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: #94a3b8 !important;
+      -webkit-text-fill-color: #94a3b8 !important;
+      font-weight: 400 !important;
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 50px white inset !important;
+      box-shadow: 0 0 0 50px white inset !important;
+      -webkit-text-fill-color: #0f172a !important;
+      color: #0f172a !important;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-600 selection:text-white flex flex-col min-h-screen">
+
+  <!-- ================= TOP TICKER BAR ================= -->
+  <div class="bg-gradient-to-r from-brand-900 via-indigo-900 to-brand-900 text-white text-xs sm:text-sm py-2 px-4 shadow-sm border-b border-indigo-800/50">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center space-x-2 space-x-reverse">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-amber-400 text-slate-950 animate-pulse">
+          ভর্তি চলছে 📢
+        </span>
+        <span class="font-medium text-slate-200">
+          HSC ও SSC নতুন ব্যাচে ভর্তি চলছে! ২০ অক্টোবরের মধ্যে রেজিস্ট্রেশনে <strong>২০% স্পেশাল ছাড়</strong>।
+        </span>
+      </div>
+      <div class="hidden md:flex items-center space-x-5 text-slate-300">
+        <a href="tel:01700123456" class="hover:text-amber-300 transition-colors flex items-center gap-1.5 font-num">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span>০১৭০০-১২৩৪৫৬</span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="flex items-center gap-1.5">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-emerald-400"></i>
+          সকাল ৮:০০ - রাত ৯:০০ (প্রতিদিন)
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN HEADER / NAVBAR ================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-700 to-indigo-900 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+            <i data-lucide="graduation-cap" class="w-7 h-7 text-amber-300"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="text-2xl font-bold tracking-tight text-slate-900 group-hover:text-brand-700 transition-colors">প্রজ্ঞা</span>
+              <span class="text-xs font-semibold px-2 py-0.5 rounded bg-brand-100 text-brand-800">একাডেমিক কেয়ার</span>
+            </div>
+            <p class="text-[11px] text-slate-500 font-medium">স্বপ্ন ছোঁয়ার বিশ্বস্ত ঠিকানা (ক্লাস ৬–১২)</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links (Multi-Page Dedicated Links) -->
+        <nav class="hidden lg:flex items-center space-x-1 xl:space-x-2 text-[15px] font-semibold text-slate-700">
+          <a href="index.html" class="px-3 py-2 rounded-lg text-brand-700 bg-brand-50 font-bold">হোম</a>
+          <a href="courses.html" class="px-3 py-2 rounded-lg hover:text-brand-700 hover:bg-slate-100 transition-all">কোর্সসমূহ</a>
+          <a href="results.html" class="px-3 py-2 rounded-lg hover:text-brand-700 hover:bg-slate-100 transition-all flex items-center gap-1">
+            <span>ফলাফল</span>
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+          </a>
+          <a href="routines.html" class="px-3 py-2 rounded-lg hover:text-brand-700 hover:bg-slate-100 transition-all">রুটিন ও নোটিশ</a>
+          <a href="teachers.html" class="px-3 py-2 rounded-lg hover:text-brand-700 hover:bg-slate-100 transition-all">শিক্ষকবৃন্দ</a>
+          <a href="branches.html" class="px-3 py-2 rounded-lg hover:text-brand-700 hover:bg-slate-100 transition-all">শাখাসমূহ</a>
+        </nav>
+
+        <!-- CTA Buttons -->
+        <div class="hidden sm:flex items-center gap-3">
+          <button onclick="openDemoModal()" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-brand-200 text-brand-700 bg-brand-50/70 hover:bg-brand-100/80 font-bold text-sm transition-all shadow-sm">
+            <i data-lucide="video" class="w-4 h-4 text-brand-600"></i>
+            <span>ফ্রি ডেমো ক্লাস</span>
+          </button>
+          <a href="admission.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-700 to-indigo-800 hover:from-brand-800 hover:to-indigo-900 text-white font-bold text-sm shadow-md shadow-brand-700/25 transition-all transform hover:-translate-y-0.5">
+            <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
+            <span>অনলাইন ভর্তি</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="lg:hidden flex items-center gap-2">
+          <a href="admission.html" class="px-3 py-1.5 rounded-lg bg-brand-700 text-white font-bold text-xs">ভর্তি</a>
+          <button id="mobileMenuBtn" aria-label="Menu" class="p-2 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Dropdown -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 shadow-lg">
+      <a href="index.html" class="block px-3 py-2.5 rounded-lg font-bold text-brand-700 bg-brand-50">হোম</a>
+      <a href="courses.html" class="block px-3 py-2.5 rounded-lg font-semibold text-slate-800 hover:bg-slate-100">কোর্সসমূহ</a>
+      <a href="results.html" class="block px-3 py-2.5 rounded-lg font-semibold text-slate-800 hover:bg-slate-100">পরীক্ষার ফলাফল</a>
+      <a href="routines.html" class="block px-3 py-2.5 rounded-lg font-semibold text-slate-800 hover:bg-slate-100">রুটিন ও নোটিশ বোর্ড</a>
+      <a href="teachers.html" class="block px-3 py-2.5 rounded-lg font-semibold text-slate-800 hover:bg-slate-100">শিক্ষক মণ্ডলী</a>
+      <a href="branches.html" class="block px-3 py-2.5 rounded-lg font-semibold text-slate-800 hover:bg-slate-100">শাখাসমূহ</a>
+      <div class="pt-4 border-t border-slate-100 flex flex-col gap-2.5">
+        <button onclick="openDemoModal(); closeMobileMenu();" class="w-full py-2.5 rounded-xl border border-brand-300 text-brand-700 font-bold text-sm bg-brand-50 flex items-center justify-center gap-2">
+          <i data-lucide="video" class="w-4 h-4"></i> ফ্রি ডেমো ক্লাস বুকিং
+        </button>
+        <a href="admission.html" class="w-full py-2.5 rounded-xl bg-brand-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+          <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i> অনলাইন ভর্তি ফরম পূরণ
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-slate-100 via-white to-slate-50 pt-10 pb-16 lg:pt-16 lg:pb-24 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100/80 border border-brand-200 text-brand-800 text-xs sm:text-sm font-bold shadow-xs">
+            <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+            <span>২০২৬ শিক্ষাবর্ষে একাদশ-দ্বাদশ (HSC) ও নবম-দশম (SSC) স্পেশাল ব্যাচ</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-[3.25rem] font-bold text-slate-900 leading-[1.25] tracking-tight">
+            বোর্ড পরীক্ষায় নিশ্চিত <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-700 via-indigo-700 to-brand-900">GPA-5 ও বেসিক</span> মজবুত করার বিশ্বস্ত ঠিকানা
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
+            বুয়েট, ঢাকা বিশ্ববিদ্যালয় ও ঢাকা মেডিকেলের অভিজ্ঞ মেন্টরদের পরিচর্যা, অধ্যায়ভিত্তিক কালারফুল লেকচার শিট, প্রতিদিনের ডেইলি এক্সাম এবং আধুনিক প্রযুক্তির সাহায্যে প্রতিটি বিষয়ের গভীর কনসেপ্ট ক্লিয়ারেন্স।
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+            <a href="courses.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-base shadow-lg shadow-brand-700/30 transition-all transform hover:-translate-y-0.5">
+              <span>কোর্সগুলো দেখুন</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="admission.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-base shadow-lg shadow-amber-500/20 transition-all transform hover:-translate-y-0.5">
+              <i data-lucide="edit-3" class="w-5 h-5"></i>
+              <span>ভর্তি ফরম পূরণ করুন</span>
+            </a>
+            <a href="https://wa.me/8801700123456" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl border border-emerald-500 text-emerald-700 bg-emerald-50/80 hover:bg-emerald-100 font-bold text-base transition-all">
+              <i data-lucide="message-circle" class="w-5 h-5 text-emerald-600"></i>
+              <span>হোয়াটসঅ্যাপ</span>
+            </a>
+          </div>
+
+          <!-- Stats -->
+          <div class="pt-6 border-t border-slate-200/90 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center lg:text-left">
+            <div class="p-3 bg-white/70 rounded-xl border border-slate-200 shadow-xs">
+              <div class="text-2xl sm:text-3xl font-extrabold text-brand-700 font-num">১২,৫০০+</div>
+              <div class="text-xs text-slate-600 font-semibold mt-0.5">সফল শিক্ষার্থী</div>
+            </div>
+            <div class="p-3 bg-white/70 rounded-xl border border-slate-200 shadow-xs">
+              <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600 font-num">৯৮.৬%</div>
+              <div class="text-xs text-slate-600 font-semibold mt-0.5">GPA-5 অর্জনের হার</div>
+            </div>
+            <div class="p-3 bg-white/70 rounded-xl border border-slate-200 shadow-xs">
+              <div class="text-2xl sm:text-3xl font-extrabold text-indigo-700 font-num">৪৫+</div>
+              <div class="text-xs text-slate-600 font-semibold mt-0.5">সেরা শিক্ষক মণ্ডলী</div>
+            </div>
+            <div class="p-3 bg-white/70 rounded-xl border border-slate-200 shadow-xs">
+              <div class="text-2xl sm:text-3xl font-extrabold text-amber-600 font-num">১০টি</div>
+              <div class="text-xs text-slate-600 font-semibold mt-0.5">আধুনিক শাখা</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interactive Batch Admission Card -->
+        <div class="lg:col-span-5">
+          <div class="bg-white rounded-3xl p-6 sm:p-7 shadow-xl shadow-slate-300/40 border border-slate-200/80 relative overflow-hidden">
+            <div class="bg-gradient-to-r from-brand-800 to-indigo-900 -mx-7 -mt-7 p-6 text-white text-center relative">
+              <span class="inline-block bg-amber-400 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
+                সীমিত আসন সংখ্যা
+              </span>
+              <h2 class="text-xl font-bold">HSC ও SSC টপ স্কোরার ব্যাচ</h2>
+              <p class="text-xs text-slate-200 mt-1">আগামী ব্যাচ শুরু হতে আর বাকি মাত্র:</p>
+              
+              <div class="grid grid-cols-4 gap-2 mt-4 max-w-xs mx-auto font-num">
+                <div class="bg-white/10 backdrop-blur-md rounded-lg p-2">
+                  <div id="cdDays" class="text-xl font-bold text-amber-300">০৫</div>
+                  <div class="text-[10px] text-slate-300">দিন</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-lg p-2">
+                  <div id="cdHours" class="text-xl font-bold text-amber-300">১৪</div>
+                  <div class="text-[10px] text-slate-300">ঘণ্টা</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-lg p-2">
+                  <div id="cdMins" class="text-xl font-bold text-amber-300">৩৫</div>
+                  <div class="text-[10px] text-slate-300">মিনিট</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-lg p-2">
+                  <div id="cdSecs" class="text-xl font-bold text-amber-300">২২</div>
+                  <div class="text-[10px] text-slate-300">সেকেন্ড</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fast Enrollment Form Widget -->
+            <form id="heroQuickForm" onsubmit="handleQuickEnroll(event)" class="space-y-3 pt-6">
+              <input type="text" id="quickName" placeholder="শিক্ষার্থীর নাম" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 font-medium focus:border-brand-600 focus:ring-2 focus:ring-brand-200 outline-none text-sm transition-all shadow-xs">
+              <input type="tel" id="quickPhone" placeholder="মোবাইল নম্বর (০১৭XXXXXXXX)" pattern="[0-9]{11}" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 font-medium focus:border-brand-600 focus:ring-2 focus:ring-brand-200 outline-none text-sm transition-all font-num shadow-xs">
+              
+              <div class="grid grid-cols-2 gap-2">
+                <select id="quickClass" class="px-3 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-brand-600 outline-none bg-white text-slate-900 font-semibold shadow-xs">
+                  <option value="HSC-1st">HSC ১ম বর্ষ</option>
+                  <option value="HSC-2nd">HSC ২য় বর্ষ</option>
+                  <option value="SSC-10">SSC দশম শ্রেণি</option>
+                  <option value="Class-9">নবম শ্রেণি</option>
+                  <option value="Class-8">অষ্টম শ্রেণি</option>
+                </select>
+                <select id="quickBranch" class="px-3 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-brand-600 outline-none bg-white text-slate-900 font-semibold shadow-xs">
+                  <option value="ফার্মগেট শাখা">ফার্মগেট শাখা</option>
+                  <option value="মিরপুর-১০ শাখা">মিরপুর-১০ শাখা</option>
+                  <option value="উত্তরা শাখা">উত্তরা শাখা</option>
+                  <option value="ধানমন্ডি শাখা">ধানমন্ডি শাখা</option>
+                  <option value="অনলাইন ব্যাচ">অনলাইন ব্যাচ</option>
+                </select>
+              </div>
+
+              <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-brand-700 to-indigo-800 hover:from-brand-800 hover:to-indigo-900 text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>ভর্তির জন্য আসন বুক করুন</span>
+              </button>
+            </form>
+            <p class="text-[11px] text-center text-slate-500 mt-2.5">
+              * ফরমটি পাঠালে আমাদের ভর্তি প্রতিনিধি ১০ মিনিটে যোগাযোগ করবেন
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES / WHY CHOOSE US ================= -->
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-block text-xs font-bold uppercase tracking-wider text-brand-700 bg-brand-50 px-3 py-1 rounded-full mb-3">
+          কেন আমরা অনন্য
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">
+          প্রজ্ঞা একাডেমি কেন প্রতিটি শিক্ষার্থীর প্রথম পছন্দ?
+        </h2>
+        <p class="text-slate-600 mt-3 text-base">
+          শুধু গতানুগতিক মুখস্থবিদ্যা নয়, আমরা বিশ্বাস করি বিষয়ভিত্তিক গভীর ধারণা ও সুশৃঙ্খল ধারাবাহিক অনুশীলনে।
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="p-7 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-brand-500 hover:shadow-lg transition-all group">
+          <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center mb-5 group-hover:bg-brand-700 group-hover:text-white transition-all">
+            <i data-lucide="award" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">বুয়েট-ঢাবি-মেডিকেল এর সেরা মেন্টর</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            প্রতিটি সাবজেক্ট পরিচালনা করেন সংশ্লিষ্ট বিষয়ে শীর্ষ বিশ্ববিদ্যালয়ে অধ্যয়নরত এবং ৫-১০ বছর শিক্ষকতার অভিজ্ঞতাসম্পন্ন দক্ষ শিক্ষকমণ্ডলী।
+          </p>
+          <a href="teachers.html" class="inline-block text-xs font-bold text-brand-700 mt-4 hover:underline">শিক্ষক তালিকা দেখুন &rarr;</a>
+        </div>
+
+        <div class="p-7 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-brand-500 hover:shadow-lg transition-all group">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-5 group-hover:bg-emerald-700 group-hover:text-white transition-all">
+            <i data-lucide="book-open-check" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">কালারফুল কনসেপ্ট বুক ও শিট</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            বোর্ড বইয়ের প্রতিটি টপিক বিশ্লেষণ করে তৈরি সহজবোধ্য রঙিন লেকচার শিট, বিগত ২০ বছরের বোর্ড প্রশ্ন ও টেস্ট পেপার সমাধান।
+          </p>
+          <a href="courses.html" class="inline-block text-xs font-bold text-emerald-700 mt-4 hover:underline">কোর্স মডিউল দেখুন &rarr;</a>
+        </div>
+
+        <div class="p-7 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-brand-500 hover:shadow-lg transition-all group">
+          <div class="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center mb-5 group-hover:bg-indigo-700 group-hover:text-white transition-all">
+            <i data-lucide="clipboard-check" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">ডেইলি এক্সাম ও লাইভ মেরিট</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            আগের দিনের ক্লাসের উপর ২০ নম্বরের ডেইলি CQ ও MCQ টেস্ট। স্বয়ংক্রিয় OMR মেশিনে নির্ভুল মূল্যায়ন ও কেন্দ্রীয় মেধা তালিকা।
+          </p>
+          <a href="results.html" class="inline-block text-xs font-bold text-indigo-700 mt-4 hover:underline">রেজাল্ট চেক করুন &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED COURSES PREVIEW ================= -->
+  <section class="py-16 sm:py-20 bg-slate-100/70 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="inline-block text-xs font-bold uppercase tracking-wider text-brand-700 bg-brand-50 px-3 py-1 rounded-full mb-2">
+            জনপ্রিয় প্রোগ্রামসমূহ
+          </span>
+          <h2 class="text-3xl font-bold text-slate-900">
+            চলমান ও আসন্ন প্রধান কোর্সসমূহ
+          </h2>
+        </div>
+        <a href="courses.html" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-brand-700 text-white font-bold text-sm hover:bg-brand-800 transition-colors self-start sm:self-auto shadow-sm">
+          <span>সকল কোর্স দেখুন</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- 3 Featured Course Cards Container -->
+      <div id="featuredCourseGrid" class="grid grid-cols-1 md:grid-cols-3 gap-7">
+        <!-- Rendered by app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= LIVE RESULTS PREVIEW WIDGET ================= -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-brand-900 via-indigo-950 to-slate-900 rounded-3xl p-8 sm:p-10 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+        <div class="space-y-3 text-center md:text-left">
+          <span class="inline-block text-xs font-bold bg-emerald-400 text-slate-950 px-3 py-1 rounded-full">
+            লাইভ রেজাল্ট সিস্টেম
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-bold">আপনার ডেইলি/উইকলি টেস্টের নম্বর দেখুন</h3>
+          <p class="text-slate-300 text-sm max-w-lg">
+            রোল নম্বর দিয়ে সহজেই যেকোনো মডেল টেস্টের বিষয়ভিত্তিক নম্বর, সেন্ট্রাল মেধা তালিকা ও শিক্ষকের মন্তব্য দেখতে ফলাফল পেজে প্রবেশ করুন।
+          </p>
+        </div>
+        <div class="shrink-0 flex flex-col sm:flex-row gap-3">
+          <a href="results.html" class="px-8 py-3.5 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-base transition-all flex items-center justify-center gap-2 shadow-lg">
+            <span>ফলাফল চেক করুন</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TOPPERS & SUCCESS STORIES ================= -->
+  <section class="py-16 sm:py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="inline-block text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-50 px-3 py-1 rounded-full mb-2">
+          কৃতী শিক্ষার্থী গ্যালারি
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">
+          আমাদের মেধাবী মুখ ও GPA-5 অর্জনকারী
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          প্রজ্ঞা একাডেমির নিয়মিত পরিচর্যা ও নিজস্ব পরিশ্রমে যারা বোর্ড পরীক্ষায় সর্বোচ্চ সাফল্য ছিনিয়ে এনেছে।
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="toppersGrid">
+        <!-- Rendered by app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-950 text-slate-300 pt-16 pb-12 border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center text-white">
+              <i data-lucide="graduation-cap" class="w-6 h-6 text-amber-300"></i>
+            </div>
+            <span class="text-2xl font-bold text-white tracking-tight">প্রজ্ঞা একাডেমি</span>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+            বাংলাদেশের মাধ্যমিক (SSC) ও উচ্চ মাধ্যমিক (HSC) স্তরের শিক্ষার্থীদের বিষয়ভিত্তিক মৌলিক জ্ঞান বৃদ্ধি এবং বোর্ড পরীক্ষার শ্রেষ্ঠ ফলাফলের জন্য বিশ্বস্ত একাডেমিক কেয়ার।
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://facebook.com" target="_blank" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#1877F2] flex items-center justify-center text-white transition-colors" title="Facebook">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#FF0000] flex items-center justify-center text-white transition-colors" title="YouTube">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://wa.me/8801700123456" target="_blank" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#25D366] flex items-center justify-center text-white transition-colors" title="WhatsApp">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 0C5.396 0 .016 5.38.016 12.016c0 2.115.553 4.18 1.603 6.002L.062 24l6.166-1.543A11.97 11.97 0 0 0 12.03 24c6.635 0 12.015-5.38 12.015-12.016C24.047 5.38 18.666 0 12.031 0zm0 22.016c-1.848 0-3.655-.497-5.23-1.439l-.375-.223-3.882.97 1.036-3.784-.245-.391a10.003 10.003 0 0 1-1.536-5.133c0-5.523 4.493-10.016 10.016-10.016 5.522 0 10.015 4.493 10.015 10.016 0 5.523-4.493 10.016-10.015 10.016zm5.488-7.508c-.3-.15-1.775-.875-2.05-.975-.275-.1-.475-.15-.675.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.414-1.49-1.077-.96-1.805-2.146-2.017-2.51-.212-.364-.023-.56.127-.71.135-.135.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.243-.585-.49-.505-.675-.515-.175-.01-.375-.01-.575-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.115 3.23 5.124 4.53.716.31 1.275.495 1.71.633.72.228 1.374.196 1.892.119.577-.086 1.775-.726 2.025-1.426.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase">গুরুত্বপূর্ণ লিংক</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="courses.html" class="hover:text-amber-400 transition-colors">কোর্সসমূহ</a></li>
+            <li><a href="results.html" class="hover:text-amber-400 transition-colors">পরীক্ষার ফলাফল</a></li>
+            <li><a href="routines.html" class="hover:text-amber-400 transition-colors">ক্লাস রুটিন</a></li>
+            <li><a href="teachers.html" class="hover:text-amber-400 transition-colors">শিক্ষক তালিকা</a></li>
+            <li><a href="branches.html" class="hover:text-amber-400 transition-colors">শাখা লোকেশন</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Programs -->
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase">প্রোগ্রামসমূহ</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="courses.html" class="hover:text-amber-400 transition-colors">HSC ১ম ও ২য় বর্ষ বিজ্ঞান</a></li>
+            <li><a href="courses.html" class="hover:text-amber-400 transition-colors">HSC ব্যবসায় শিক্ষা</a></li>
+            <li><a href="courses.html" class="hover:text-amber-400 transition-colors">SSC স্পেশাল বোর্ড চ্যালেঞ্জ</a></li>
+            <li><a href="courses.html" class="hover:text-amber-400 transition-colors">৮ম শ্রেণি জুনিয়র ব্যাচ</a></li>
+            <li><a href="courses.html" class="hover:text-amber-400 transition-colors">ফাইনাল মডেল টেস্ট প্রোগ্রাম</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Hotline -->
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase">যোগাযোগ</h4>
+          <div class="space-y-2.5 text-sm text-slate-400">
+            <div class="flex items-start gap-2.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-amber-400 shrink-0 mt-1"></i>
+              <span>প্রধান কার্যালয়: ৪২/এ ফার্মগেট, গ্রিন রোড, ঢাকা-১২১৫</span>
+            </div>
+            <div class="flex items-center gap-2.5 font-num">
+              <i data-lucide="phone" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <a href="tel:01700123456" class="hover:text-white">০১৭০০-১২৩৪৫৬</a>
+            </div>
+            <div class="flex items-center gap-2.5 font-num">
+              <i data-lucide="mail" class="w-4 h-4 text-indigo-400 shrink-0"></i>
+              <span>info@proggaacademic.edu.bd</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          &copy; ২০২৬ প্রজ্ঞা একাডেমি ও কেয়ার। সর্বস্বত্ব সংরক্ষিত।
+        </div>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-slate-400">গোপনীয়তা নীতি</a>
+          <a href="#" class="hover:text-slate-400">ব্যবহারের শর্তাবলী</a>
+          <a href="#" class="hover:text-slate-400">রিফান্ড পলিসি</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/8801700123456" target="_blank" class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-xl hover:scale-110 transition-transform">
+      <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12.031 0C5.396 0 .016 5.38.016 12.016c0 2.115.553 4.18 1.603 6.002L.062 24l6.166-1.543A11.97 11.97 0 0 0 12.03 24c6.635 0 12.015-5.38 12.015-12.016C24.047 5.38 18.666 0 12.031 0zm0 22.016c-1.848 0-3.655-.497-5.23-1.439l-.375-.223-3.882.97 1.036-3.784-.245-.391a10.003 10.003 0 0 1-1.536-5.133c0-5.523 4.493-10.016 10.016-10.016 5.522 0 10.015 4.493 10.015 10.016 0 5.523-4.493 10.016-10.015 10.016zm5.488-7.508c-.3-.15-1.775-.875-2.05-.975-.275-.1-.475-.15-.675.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.414-1.49-1.077-.96-1.805-2.146-2.017-2.51-.212-.364-.023-.56.127-.71.135-.135.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.243-.585-.49-.505-.675-.515-.175-.01-.375-.01-.575-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.115 3.23 5.124 4.53.716.31 1.275.495 1.71.633.72.228 1.374.196 1.892.119.577-.086 1.775-.726 2.025-1.426.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/></svg>
+    </a>
+  </div>
+
+  <!-- FREE DEMO CLASS MODAL -->
+  <div id="demoModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-md rounded-3xl shadow-2xl overflow-hidden border border-slate-200 animate-fade-in relative my-8">
+      <div class="bg-gradient-to-r from-emerald-800 to-teal-900 text-white p-6 relative">
+        <button onclick="closeDemoModal()" class="absolute top-5 right-5 text-slate-300 hover:text-white p-1 rounded-lg bg-white/10">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+        <span class="inline-block text-[11px] font-bold uppercase tracking-wider bg-amber-400 text-slate-950 px-2.5 py-0.5 rounded-full mb-1">
+          সম্পূর্ণ বিনামূল্যে
+        </span>
+        <h3 class="text-xl font-bold">ফ্রি ট্রায়াল ডেমো ক্লাস বুকিং</h3>
+        <p class="text-xs text-emerald-100 mt-1">ভর্তির আগে সরাসরি শিক্ষকদের ক্লাস কোয়ালিটি পরখ করুন</p>
+      </div>
+
+      <form onsubmit="handleDemoSubmit(event)" class="p-6 space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">আপনার নাম *</label>
+          <input type="text" id="demoName" required placeholder="শিক্ষার্থীর নাম" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 font-medium text-sm focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 outline-none transition-all shadow-xs">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">মোবাইল নম্বর *</label>
+          <input type="tel" id="demoPhone" required placeholder="০১৭XXXXXXXX" pattern="[0-9]{11}" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 font-medium text-sm focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 outline-none font-num transition-all shadow-xs">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">ক্লাস ও বিষয় *</label>
+          <select id="demoSubject" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 outline-none bg-white text-slate-900 font-semibold shadow-xs">
+            <option value="HSC-Physics">HSC পদার্থবিজ্ঞান (ভেক্টর ও গতিবিদ্যা)</option>
+            <option value="HSC-Chemistry">HSC রসায়ন (গুণগত রসায়ন ও মৌলের পর্যায়বৃত্ত ধর্ম)</option>
+            <option value="HSC-Math">HSC উচ্চতর গণিত (ম্যাট্রিক্স ও ক্যালকুলাস)</option>
+            <option value="SSC-Science">SSC সাধারণ বিজ্ঞান ও গণিত ডেমো</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">ক্লাসের মাধ্যম *</label>
+          <select id="demoMode" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 outline-none bg-white text-slate-900 font-semibold shadow-xs">
+            <option value="Offline">নিকটস্থ শাখায় সরাসরি ক্লাসরুমে</option>
+            <option value="Online">অনলাইন জুমে (Zoom Live)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2">
+          <i data-lucide="calendar-check" class="w-4 h-4"></i>
+          <span>ডেমো ক্লাসের সিট কনফার্ম করুন</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
